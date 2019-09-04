@@ -1,37 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>HTML wireframe</title>
+    <title>Portfolio of Alex Fukui</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="./styles/css/index.css">
 </head>
 <body>
     <nav role="navigation">Nav</nav>
     <main role="main">
         <header role="banner">
-            <h1>Hero</h1>
+            <hgroup>
+                <h1>Alexander Fukui</h1>
+                <h2>Web Designer and Developer</h2>
+            </hgroup>
         </header>
 
-        <section>
-            Section 1
+        <section id="motto" class="hero-copy">
+            <p>I believe a balance between good design, content and code are all critical parts of great user experiences.</p>
+        </section>
+
+        <section id="about">
+                <h2>About</h2>
+                <p>
+                    For most of my life I have lived in Minneapolis, Minnesota. Currently, I live and work in a shared space with three pets and four humans total.</p>
+                <p>
+                    I work with many tools to solve design problems, and try to keep up with new methods. My favorite parts of this work include perfecting functions, perusing well-written documentation and discussing persistent problems loudly with my cat.
+                </p>
+                <p>
+                    In my free time, I go to karaoke, cook and play Civilization 6.
+                </p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <p>javascript ES6, HTML5, CSS3, Sass, jQuery, Node.js with Webpack, Adobe Photoshop and Illustrator.</p>
+        </section>
+
+        <section id="project-section">
+            <h2>Samples</h2>
+            <ul id="projects">
+                <li class="project">
+                    <h3><a href="https://thinkful-ei-gecko.github.io/Alexander-Preet-QuizApp/">Morbid History Quiz App</a></h3>
+                    <p>A thrilling adventure through some dark parts of history, which rates your morbidity at the end.</p>
+                    <h4>Uses</h4>
+                    <p>HTML5, CSS, javascript, jQuery.</p>
+                    <a href="https://thinkful-ei-gecko.github.io/Alexander-Preet-QuizApp/">Visit</a>
+                    <a href="https://github.com/thinkful-ei-gecko/Alexander-Preet-QuizApp">github</a>
+                </li>
+            </ul>
         </section>
 
         <section>
-            Section 2
-        </section>
-
-        <section>
-            Section 3
-        </section>
-
-        <section>
-            Project 3
+            <h2>Contact</h2>
+            <address>
+            <ul>
+                <li>
+                    email <a href="mailto:alex@alexfukui.com">alex@alexfukui.com</a>
+                </li>
+                    
+                <li>
+                    github <a href="https://github.com/psychicbologna">psychicbologna</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/alex-fukui-49a56116/">linkedin</a>
+                </li>
+            </ul>
+            </address>
         </section>
         
-        <section>
-            Section 4
-        </section>
     </main>
     <footer role="content-info">Footer</footer>
 </body>

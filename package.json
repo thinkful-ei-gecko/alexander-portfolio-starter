@@ -1,0 +1,31 @@
+{
+  "name": "alexander-portfolio-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch ./styles/scss/index.scss -o ./styles/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thinkful-ei-gecko/alexander-portfolio-starter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thinkful-ei-gecko/alexander-portfolio-starter/issues"
+  },
+  "homepage": "https://github.com/thinkful-ei-gecko/alexander-portfolio-starter#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "jquery": "^3.4.1",
+    "node-sass": "^4.12.0",
+    "sass": "^1.22.10"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  }
+}
