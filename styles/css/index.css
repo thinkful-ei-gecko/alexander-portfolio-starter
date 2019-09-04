@@ -24,6 +24,7 @@ Usage:
 
 */
 /* Creates a pinched border effect on an element's border */
+/*A background image that gives the illusion of fading as you move down the screen. */
 /* changes element AND all contents to display: none; */
 /* Generic */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -346,7 +347,7 @@ p {
   margin-inline-end: 0; }
 
 section#about p {
-  margin-bottom: 1.75rem; }
+  margin-bottom: 1.5rem; }
 
 a {
   color: #ffcc33; }
@@ -359,41 +360,63 @@ body {
   margin: 0;
   padding: 0;
   color: #cebebe;
-  line-height: 1.75em;
-  border-color: #3c787e; }
+  line-height: 1.5rem;
+  border-color: #336666; }
+  @media (max-width: 757px) {
+    body {
+      font-size: 16px; } }
+  @media (min-width: 758px) and (max-width: 1023px) {
+    body {
+      font-size: 18px; } }
+  @media (min-width: 1024px) {
+    body {
+      font-size: 21px; } }
 
 main {
-  margin-top: 100px;
   margin-bottom: 2rem;
-  display: grid;
-  grid-gap: 2rem 0; }
+  display: grid; }
+
+section:nth-child(even) {
+  background-color: #336666; }
 
 nav,
 footer {
   color: #330033;
   display: flex;
-  padding: 1rem;
   background-color: #cebebe;
-  border-color: #3c787e;
+  border-color: #336666;
   height: 100px; }
 
 nav {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: -99;
   background-image: linear-gradient(180deg, #cebebe 0%, #bebebe 99%);
-  position: fixed; }
+  display: flex; }
+  @media (max-width: 757px) {
+    nav {
+      min-height: 8rem; } }
+  @media (max-width: 1023px) {
+    nav {
+      flex-flow: column; } }
+  @media (min-width: 758px) and (max-width: 1023px) {
+    nav {
+      flex-grow: 1; } }
+  @media (min-width: 1024px) {
+    nav {
+      flex-flow: row; } }
 
 header {
+  margin-top: -1rem;
   background-image: url("/assets/images/brickwall.png");
+  background-size: 780px;
   background-repeat: no-repeat;
-  background-position: center;
-  background-color: #330033;
-  background-blend-mode: multiply;
+  background-position: top;
+  background-color: none;
+  background-attachment: fixed;
   grid-column: span 6;
-  padding: 3rem 0;
-  margin-top: 2rem; }
+  padding: 3rem 0; }
 
 header, section {
   display: flex;
@@ -405,13 +428,18 @@ section {
   grid-column: 2 / span 4;
   /* grid-column: 2 / span 2; */
   min-height: 200px;
-  padding: 2rem;
-  border: 1px solid #cebebe; }
+  padding: 0 1.5rem; }
+
+section img {
+  background-image: linear-gradient(to bottom, #477061, #ffcc33 60%);
+  background-attachment: fixed;
+  background-size: 100vw 100vh; }
 
 footer {
   background-image: linear-gradient(0deg, #cebebe 0%, #bebebe 99%);
   min-height: 100px;
-  width: 100%; }
+  width: 100%;
+  padding: 1rem; }
 
 ul {
   list-style-type: none;
@@ -421,39 +449,11 @@ ul {
   margin-inline-end: 0;
   padding-inline-start: 0; }
 
-/* Base */
-/* Object */
-/* Components */
-.hero-copy {
-  border-bottom-right-radius: 2em;
-  border-top-left-radius: 2em;
-  border-width: 3.5px 10px; }
-  .hero-copy p {
-    padding: 2rem 0;
-    font-size: 1.25em;
-    border-top: #3c787e; }
-
-/*Scope: button, blockquote, .
-// 
-
-
-/* Queries */
 @media only screen and (max-width: 767px) {
-  h1 {
-    font-size: 1.5em; }
-  h2 {
-    font-size: 1em;
-    text-align: center; }
-  p {
-    max-width: 300px; }
   main {
     grid-template-columns: 1rem repeat(4, 1fr) 1rem; } }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  h1 {
-    font-size: 2em; }
-  h2 {
-    font-size: 1.5em; }
   main {
     grid-template-columns: 1rem repeat(6, 1fr) 1rem;
     grid-gap: 2rem 2rem; }
@@ -471,9 +471,6 @@ ul {
     grid-column: 2 / span 6; } }
 
 @media only screen and (min-width: 1024px) {
-  p {
-    max-width: 500px;
-    font-size: 1.37em; }
   main {
     grid-template-columns: 2rem repeat(12, 1fr) 2rem;
     grid-gap: 3rem 0; }
@@ -486,3 +483,58 @@ ul {
     grid-column: 2 / span 6; }
   section:nth-child(even) {
     grid-column: 9 / span 5; } }
+
+/* Object */
+/* Components */
+.hero-copy {
+  background-color: #336666;
+  z-index: -99;
+  margin: -1rem; }
+
+@media (max-width: 757px) {
+  #logo {
+    width: 5.5rem;
+    margin: 1rem 0 1.5rem 1rem; } }
+
+@media (min-width: 758px) and (max-width: 1023px) {
+  #logo {
+    width: 8rem; } }
+
+#nav-menu {
+  display: flex; }
+  @media (max-width: 757px) {
+    #nav-menu {
+      justify-content: space-around; } }
+  @media (min-width: 758px) and (max-width: 1023px) {
+    #nav-menu {
+      justify-content: flex-end;
+      align-items: flex-end; } }
+
+@media (min-width: 758px) and (max-width: 1023px) {
+  #nav-menu li {
+    margin-left: 2rem; } }
+
+@media (min-width: 758px) and (max-width: 1023px) {
+  #nav-menu:last-child {
+    margin-right: 2rem; } }
+
+#nav-menu a {
+  text-decoration: none;
+  color: #330033;
+  font-family: "Azoft Sans Bold", "courier", "sans-serif"; }
+
+/*Scope: button, blockquote, .
+// 
+
+
+/* Queries */
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 1.5em; }
+  h2 {
+    font-size: 1em;
+    text-align: center; }
+  p {
+    max-width: 300px; }
+  main {
+    grid-template-columns: 1rem repeat(4, 1fr) 1rem; } }

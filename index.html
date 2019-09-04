@@ -6,7 +6,14 @@
     <link rel="stylesheet" type="text/css" href="./styles/css/index.css">
 </head>
 <body>
-    <nav role="navigation">Nav</nav>
+    <nav role="navigation">
+        <img src="assets/images/logo-portfolio.svg" id='logo' alt="A simple logo." />
+        <ul id="nav-menu">
+            <li><a href="#section-about">About</a></li>
+            <li><a href="#section-samples">Samples</a></li>
+            <li><a href="#section-contact">Contact</a></li>
+        </ul>
+    </nav>
     <main role="main">
         <header role="banner">
             <hgroup>
@@ -19,7 +26,8 @@
             <p>I believe a balance between good design, content and code are all critical parts of great user experiences.</p>
         </section>
 
-        <section id="about">
+        <section id="section-about">
+            <img src="assets/images/me-mobile.png" alt="A photo of me in Muir Woods." />
                 <h2>About</h2>
                 <p>
                     For most of my life I have lived in Minneapolis, Minnesota. Currently, I live and work in a shared space with three pets and four humans total.</p>
@@ -33,10 +41,18 @@
 
         <section id="skills">
             <h2>Skills</h2>
-            <p>javascript ES6, HTML5, CSS3, Sass, jQuery, Node.js with Webpack, Adobe Photoshop and Illustrator.</p>
+            <ul class="skills">
+                <li>javascript ES6</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Sass</li>
+                <li>jQuery</li>
+                <li>Node.js with Webpack</li>
+                <li>Adobe Photoshop and Illustrator.</li>
+            </ul>
         </section>
 
-        <section id="project-section">
+        <section id="section-samples">
             <h2>Samples</h2>
             <ul id="projects">
                 <li class="project">
@@ -50,7 +66,7 @@
             </ul>
         </section>
 
-        <section>
+        <section id="section-contact">
             <h2>Contact</h2>
             <address>
             <ul>

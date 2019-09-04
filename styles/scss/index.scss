@@ -9,10 +9,11 @@
 /* Elements */
 @import 'type-elements';
 @import 'structural-elements';
-/* Base */
+@import 'grid';
 /* Object */
 /* Components */
 @import 'copy-components';
+@import 'menus';
 /*Scope: button, blockquote, .
 // 
 
@@ -37,73 +38,3 @@
   }
 } 
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-
-  h1 {
-    font-size: 2em;
-  }
-  h2 {
-    font-size: 1.5em;
-  }
-
-  main {
-    grid-template-columns: 1rem repeat(6, 1fr) 1rem;
-    grid-gap: 2rem 2rem;
-  }
-
-  header {
-    grid-column: span 8;
-  }
-
-  section {
-    grid-column: 2 / span 4;
-  }
-
-  p {
-    -webkit-columns: 200px;
-    -moz-columns: 200px;
-    columns: 200px;
-  }
-
-  section:nth-child(odd) {
-    grid-column: 6 / span 2;
-  }
-  section:last-child {
-    grid-column: 2 / span 6;
-  }
-
-}
-
-@media only screen and (min-width: 1024px) {
-
-  p {
-    // -webkit-columns: 500px;
-    // -moz-columns: 500px;
-    // columns: 500px;
-    max-width: 500px;
-    font-size: 1.37em;
-  }
-
-  main {
-    grid-template-columns: 2rem repeat(12, 1fr) 2rem;
-    grid-gap: 3rem 0;
-  }
-
-  header, section:nth-child(2) {
-    margin-top: 3rem;
-    min-height: 500px;
-  }
-
-  header {
-    grid-column: 1 / 9;
-  }
-
-  section {
-    grid-column: 2 / span 6;
-  }
-
-  section:nth-child(even) {
-    grid-column: 9 / span 5;
-  }
-
-}

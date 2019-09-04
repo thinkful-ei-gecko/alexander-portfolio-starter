@@ -1,10 +1,10 @@
 h1, h2, h3 {
-    font-family: $font-stack-copy;
+    font-family: $font-stack-header;
 }
 
 body {
     font-size: $base-font-size;
-    font-family: $font-stack-header
+    font-family: $font-stack-copy;
 }
 
 p {

@@ -9,7 +9,7 @@ const cssSrc = './styles/css';
 
 gulp.task('sass', function() {
   return gulp.src(sassSrc)
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(cssSrc))
     .pipe(browserSync.reload({
       stream:true

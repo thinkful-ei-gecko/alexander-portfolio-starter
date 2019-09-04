@@ -1,15 +1,26 @@
 //Styled as hero copy.
 
 @mixin border-hero-copy {
-    @include pinch-border(2em);
-    border-width: 3.5px 10px;
       p {
-        padding: 2rem 0;
+        padding: 1rem 0;
         font-size: 1.25em;
         border-top: $accent-1;
       }
   }
 
-.hero-copy {  
-  @include border-hero-copy();
+.hero-copy {
+  background-color: $accent-1;
+  z-index: -99;
+  margin: -1rem;
 }
+
+#logo {
+  @include breakpoint(mobile){
+    width: 5.5rem;
+    margin: 1rem 0 $base-line-height 1rem
+  }
+  @include breakpoint(tablet){
+    width: 8rem;
+  }
+}
+
