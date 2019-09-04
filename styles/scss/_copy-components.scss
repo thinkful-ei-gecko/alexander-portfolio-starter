@@ -1,0 +1,15 @@
+//Styled as hero copy.
+
+@mixin border-hero-copy {
+    @include pinch-border(2em);
+    border-width: 3.5px 10px;
+      p {
+        padding: 2rem 0;
+        font-size: 1.25em;
+        border-top: $accent-1;
+      }
+  }
+
+.hero-copy {  
+  @include border-hero-copy();
+}

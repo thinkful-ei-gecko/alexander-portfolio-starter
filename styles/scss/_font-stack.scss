@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Exo 2 Regular';
+    src: url('../../assets/fonts/Exo2-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Azoft Sans Bold';
+    src: url('../../assets/fonts/azoft-sans-bold.ttf');
+}
+
+$font-stack-header: 'Exo 2 Regular', 'georgia', 'serif';
+$font-stack-copy: 'Azoft Sans Bold', 'courier', 'sans-serif';

@@ -1,0 +1,14 @@
+/* Creates a pinched border effect on an element's border */
+@mixin pinch-border($radius) {
+    border-bottom-right-radius: $radius;
+    border-top-left-radius: $radius;
+  }
+
+
+/* changes element AND all contents to display: none; */
+// @mixin display-none {
+//     display: none;
+//     * {
+//         display: none;
+//     }
+// }

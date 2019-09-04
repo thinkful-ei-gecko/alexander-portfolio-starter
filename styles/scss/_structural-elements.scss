@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box
+  }
+
+body {
+    background: $primary-base;
+    margin: 0;
+    padding: 0;
+    color: $accent-primary;
+    line-height: 1.75em;
+    border-color: $border-color;
+  }
+  
+  main {
+    margin-top: 100px;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-gap: 2rem 0;
+  }
+  
+  nav,
+  footer { 
+    color: $primary-base;
+    display: flex;
+    padding: 1rem;
+    background-color: $accent-primary;
+    border-color: $accent-1;
+    height: 100px;
+  }
+  
+  nav {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-image: linear-gradient(180deg, $accent-primary 0%, #bebebe 99%);
+    position: fixed;
+  }
+  
+  header {
+    background-image: url('/assets/images/brickwall.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $primary-base;
+    background-blend-mode: multiply;
+    grid-column: span 6;
+    padding: 3rem 0;
+    margin-top: 2rem;
+  }
+  
+  header, section {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  section {
+    grid-column: 2 / span 4;
+    /* grid-column: 2 / span 2; */
+    min-height: 200px;
+    padding: 2rem;
+    border: 1px solid $accent-primary;
+  }
+  
+  footer {
+    background-image: linear-gradient(0deg, $accent-primary 0%, #bebebe 99%);
+    min-height: 100px;
+    width: 100%;
+  }
+
+  
+ul {
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+}

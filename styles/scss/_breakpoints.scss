@@ -1,0 +1,55 @@
+
+/*
+Usage:
+.example {
+    width: 100%;
+        @include breakpoint(mobile) {
+        width:50%;
+    }
+}
+
+*/
+
+@mixin breakpoint($point) {
+
+        // This applies ONLY to Below Mobile sizes: @include breakpoint(submobile)
+    @if $point == submobile {
+        @media (max-width: 320px) {
+            @content;
+        }
+    }
+    // This applies ONLY to Mobile sizes: @include breakpoint(mobile)
+    @if $point == mobile {
+        @media (max-width: 757px) {
+            @content;
+        }
+
+        // This applies to both Mobile and Tablet sizes: @include breakpoint(mobiletablet);
+    }
+    @else if $point == mobiletablet {
+        @media (max-width: 1023px) {
+            @content;
+        }
+
+        // This applies ONLY to Tablet sizes: @include breakpoint(tablet)
+    }
+    @else if $point == tablet {
+        @media (min-width: 758px) and (max-width: 1023px) {
+            @content;
+        }
+
+        // This applies to both Tablet and Desktop sizes: @include breakpoint(tabletdesktop);
+    }
+    @else if $point == tabletdesktop {
+        @media (min-width: 758px) {
+            @content;
+        }
+
+        //This applies ONLY to Desktop sizes: @include breakpoint(desktop)
+    }
+    @else if $point == desktop {
+        @media (min-width: 1024px) {
+            @content;
+        }
+    }
+}

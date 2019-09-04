@@ -1,0 +1,29 @@
+h1, h2, h3 {
+    font-family: $font-stack-copy;
+}
+
+body {
+    font-size: $base-font-size;
+    font-family: $font-stack-header
+}
+
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+//Recon
+section#about p {
+    margin-bottom: $line-break;
+}
+
+@mixin pinch-border($radius) {
+  border-bottom-right-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+a {
+    color: $accent-2;
+  }  
