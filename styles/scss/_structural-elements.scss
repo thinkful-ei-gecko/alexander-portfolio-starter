@@ -67,14 +67,8 @@ body {
   }
   
   header {
-    margin-top: -1rem;
-    background-image: url('/assets/images/brickwall.png');
-    background-size: 780px;
-    background-repeat: no-repeat;
-    background-position: top;
-    background-color: none;
-    background-attachment: fixed;
     @include breakpoint(mobile){
+      @include off-register-background('/assets/images/brickwall.png', default, default);
     }
   }
   

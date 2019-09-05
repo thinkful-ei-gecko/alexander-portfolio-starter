@@ -11,6 +11,19 @@
     background-size: 100vw 100vh;
   }
 
+  /**
+  * A mixin designed for inherently transparent or low opacity set image backgrounds that are off-register by a set margin on top, with variable image and size.
+  */
+  @mixin off-register-background($url, $margin: -1rem, $size: 780px) {
+    margin-top: $margin;
+    background-image: url($url);
+    background-size: $size;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: none;
+    background-attachment: fixed;
+  }
+
 /* changes element AND all contents to display: none; */
 // @mixin display-none {
 //     display: none;
