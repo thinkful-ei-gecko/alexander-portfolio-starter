@@ -1,26 +1,32 @@
 //Styled as hero copy.
 
-@mixin border-hero-copy {
-      p {
-        padding: 1rem 0;
-        font-size: 1.25em;
-        border-top: $accent-1;
-      }
-  }
-
 .hero-copy {
   background-color: $accent-1;
   z-index: -99;
-  margin: -1rem;
+  margin: -1rem 0;
 }
 
 #logo {
   @include breakpoint(mobile){
     width: 5.5rem;
-    margin: 1rem 0 $base-line-height 1rem
+    margin: 1rem 0 $line-break 1rem;
   }
   @include breakpoint(tablet){
     width: 8rem;
   }
 }
 
+p.p--break {
+  margin-bottom: $line-break;
+}
+
+#section-about {
+  background-image: url(/assets/images/woods.png);
+  background-bottom: 0;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+section img{
+  margin-bottom: 3rem;
+}

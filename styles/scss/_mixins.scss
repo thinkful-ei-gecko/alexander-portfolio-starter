@@ -6,7 +6,7 @@
 
 /*A background image that gives the illusion of fading as you move down the screen. */
   @mixin accent-gradient {
-    background-image: linear-gradient(to bottom, mix($accent-2, $accent-1, 10), $accent-2 60%);
+    background-image: linear-gradient(to bottom, mix($accent-2, $accent-1, 10), $accent-2 50%);
     background-attachment: fixed;
     background-size: 100vw 100vh;
   }

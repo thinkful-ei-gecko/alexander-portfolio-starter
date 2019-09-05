@@ -6,35 +6,14 @@
 @import 'mixins';
 /* Generic */
 @import 'normalize';
+@import 'base-settings';
 /* Elements */
 @import 'type-elements';
 @import 'structural-elements';
 @import 'grid';
 /* Object */
+@import 'project-style';
 /* Components */
 @import 'copy-components';
+
 @import 'menus';
-/*Scope: button, blockquote, .
-// 
-
-
-/* Queries */
-
-@media only screen and (max-width: 767px) {
-
-  h1 {
-    font-size: 1.5em;
-  }
-  h2 {
-    font-size: 1em;
-    text-align: center;
-  }
-  p {
-    max-width: 300px;
-  }
-
-  main {
-    grid-template-columns: 1rem repeat(4, 1fr) 1rem;
-  }
-} 
-

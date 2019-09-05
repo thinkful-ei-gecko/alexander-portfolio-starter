@@ -3,6 +3,10 @@
   }
 
 body {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background: $primary-base;
     margin: 0;
     padding: 0;
@@ -22,7 +26,6 @@ body {
   
   main {
     margin-bottom: 2rem;
-    display: grid;
   }
 
   section:nth-child(even) {
@@ -71,8 +74,8 @@ body {
     background-position: top;
     background-color: none;
     background-attachment: fixed;
-    grid-column: span 6;
-    padding: 3rem 0;
+    @include breakpoint(mobile){
+    }
   }
   
   header, section {
@@ -83,10 +86,9 @@ body {
   }
   
   section {
-    grid-column: 2 / span 4;
-    /* grid-column: 2 / span 2; */
-    min-height: 200px;
-    padding: 0 1.5rem;
+    display: flex;
+    flex-flow: column;
+    padding: 3rem 0;
     // border: 1px solid $accent-primary;
   }
 
@@ -98,15 +100,4 @@ body {
     background-image: linear-gradient(0deg, $accent-primary 0%, #bebebe 99%);
     min-height: 100px;
     width: 100%;
-    padding: 1rem;
   }
-
-  
-ul {
-  list-style-type: none;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-  padding-inline-start: 0;
-}
