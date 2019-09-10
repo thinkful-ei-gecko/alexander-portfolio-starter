@@ -3,7 +3,11 @@
 .hero-copy {
   background-color: $accent-1;
   z-index: -99;
-  margin: -1rem 0;
+  @include breakpoint(mobiletablet){
+    margin: -1rem 0;
+  }
+  @include breakpoint(desktop) {
+  }
 }
 
 #logo {
@@ -13,7 +17,15 @@
   }
   @include breakpoint(tablet){
     width: 8rem;
+    margin: 1rem 0 $line-break 1rem;
   }
+  @include breakpoint(desktop){
+    margin: 0 3rem;
+    margin: 0 0 4rem 1rem;
+  }
+}
+#logo img {
+  width: 8rem;
 }
 
 p.p--break {

@@ -24,6 +24,13 @@
     background-attachment: fixed;
   }
 
+/*Change settings for all headers*/
+// @for $index from 1 through 6 {
+//   h#{$index}{
+//     font: 32px/42px trajan-pro-1,trajan-pro-2;
+//   }
+// }
+
 /* changes element AND all contents to display: none; */
 // @mixin display-none {
 //     display: none;

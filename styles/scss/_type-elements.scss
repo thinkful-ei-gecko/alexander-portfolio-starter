@@ -25,3 +25,9 @@ a {
 section ul {
     margin-bottom: $line-break;
 }
+
+p {
+    @include breakpoint(tabletdesktop) {
+        max-width: 20rem;
+    }
+}

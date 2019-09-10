@@ -25,7 +25,7 @@ body {
   }
   
   main {
-    margin-bottom: 2rem;
+    max-width: 1200px;
   }
 
   section:nth-child(even) {
@@ -45,7 +45,6 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    z-index: -99;
     background-image: linear-gradient(180deg, $accent-primary 0%, #bebebe 99%);
     display: flex;
 
@@ -59,17 +58,22 @@ body {
 
     @include breakpoint(tablet){
       flex-grow: 1;
+      min-height: 10rem;
     }
 
     @include breakpoint(desktop){
+      height: 16rem;
       flex-flow: row;
+      align-items: flex-end;
     }
   }
   
   header {
-    @include breakpoint(mobile){
       @include off-register-background('/assets/images/brickwall.png', default, default);
-    }
+  }
+
+  header {
+    padding: 4rem 0;
   }
   
   header, section {
@@ -94,4 +98,6 @@ body {
     background-image: linear-gradient(0deg, $accent-primary 0%, #bebebe 99%);
     min-height: 100px;
     width: 100%;
+    padding-top: $line-break;
+    padding-left: $line-break;
   }

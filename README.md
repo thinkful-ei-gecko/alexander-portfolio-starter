@@ -12,6 +12,12 @@
 
 - 2019-09-04 23:29:21: Mobile style is nearly there, I created and implemented a few more background images from my trip to Muir Woods and settled on a template for the Samples section. Just need to finish styling the last few sections and the rest will be fast and easy. Breaking to continue studying React.
 
+-2019-09-06 10:41:16: Mobile and Tablet are palatable, last stretch is the desktop.
+
+- 2019-09-06 15:31:10: Setting up new grids as needed. The off-register background effect has broken on the bottom of the hero image on tablet+ size, need to figure out why.
+
+-2019-09-09 23:21:29: Think it's good enough! Going to try submitting for review.
+
 ## FUTURE GOALS:
 
 - Load project images into samples section.
