@@ -1,0 +1,36 @@
+#section-about {
+    @include breakpoint(tabletdesktop) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 3rem 1fr;
+        grid-template-areas:
+            "heading heading"
+            "text image";
+    }
+
+    @include breakpoint(desktop) {
+        grid-template-columns: 4rem repeat(2, 1fr);
+        grid-template-areas:
+        ". heading heading"
+        ". text image"
+    }
+}
+
+#section-about h2 {
+    @include breakpoint(tabletdesktop) {
+        grid-area: heading;
+        margin-inline-start: 1.5rem;
+    }
+}
+
+#section-about img {
+    @include breakpoint(tabletdesktop) {
+        grid-area: image;
+    }
+}
+
+.about-text {
+    @include breakpoint(tabletdesktop) {
+        grid-area: text;
+    }
+}
