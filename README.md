@@ -18,10 +18,8 @@
 
 -2019-09-09 23:21:29: Think it's good enough! Going to try submitting for review.
 
+-2019-09-18 15:59:12: Required fixes from submission applied.
+
 ## FUTURE GOALS:
 
-- Load project images into samples section.
-- Build layout for projects section.
-- Complete mobile
-- Complete tablet
-- Complete desktop
+- 
