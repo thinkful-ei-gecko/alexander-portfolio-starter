@@ -1,8 +1,8 @@
-/* Creates a pinched border effect on an element's border */
-@mixin pinch-border($radius) {
-    border-bottom-right-radius: $radius;
-    border-top-left-radius: $radius;
-  }
+// /* Creates a pinched border effect on an element's border */
+// @mixin pinch-border($radius) {
+//     border-bottom-right-radius: $radius;
+//     border-top-left-radius: $radius;
+//   }
 
 /*A background image that gives the illusion of fading as you move down the screen. */
   @mixin accent-gradient {
