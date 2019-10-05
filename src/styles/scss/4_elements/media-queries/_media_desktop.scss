@@ -1,43 +1,44 @@
 @media only screen and (min-width: 1024px) {
+  //Variables
+  $offset-height: -2rem;
+  
   //Grid
   main {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: 1fr repeat(12, 1fr) 1fr;
   }
 
   header {
     grid-row: 1 / 2;
-    grid-column: 1 / 8;
-    margin: -3rem 0;
+    grid-column: 1 / 9;
   }
 
   section#section-motto {
     grid-row: 2 / 3;
-    grid-column: 3 / 13;
+    grid-column: 3 / 15;
     padding: 4rem 0;
   }
 
   section#section-about {
     grid-row: 3 / 4;
-    grid-column: 1 / 13;
-    margin: -3rem 0;
+    grid-column: 1 / 14;
   }
 
   section#section-skills {
     grid-row: 4 / 5;
-    grid-column: 1 / 11;
+    grid-column: 1 / 13;
     z-index: -99;
     padding: 4em 0;
   }
 
   section#section-samples {
     grid-row: 5 / 6;
-    grid-column: 1 / 13;
+    grid-column: 1 / 15;
   }
 
   section#section-contact {
     grid-row: 6 / 7;
-    grid-column: 1 / 13;
+    grid-column: 1 / 15;
   }
 
   //Structural Components
@@ -47,7 +48,6 @@
   }
 
   nav {
-    height: 16rem;
     flex-flow: row;
     align-items: flex-end;
   }
@@ -68,7 +68,7 @@
   }
 
   #section-about {
-    grid-template-columns: 4rem repeat(2, 1fr);
+    grid-template-columns: 1fr repeat(2, 2fr) 1fr;
     grid-template-areas:
       '. heading heading'
       '. text image';

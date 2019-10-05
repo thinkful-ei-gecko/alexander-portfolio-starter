@@ -1,0 +1,11 @@
+#section-about {
+    @include offset-bg('/assets/images/woods.png');
+  }
+
+#section-about img {
+    max-width: 320px;
+}
+
+.about-text {
+    max-width: 450px;
+}

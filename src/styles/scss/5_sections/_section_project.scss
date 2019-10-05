@@ -18,10 +18,8 @@
   }
 
   .project-links {
-    padding-bottom: $line-break;
     display: flex;
     justify-content: center;
-    border-bottom: 2px solid;
   }
 
   .project-links a:hover {
@@ -34,7 +32,3 @@
     background-color: darken($accent-1, 15%);
   }
 
-  .project-links a:first-child:after {
-    content: '||';
-    margin: 0 1rem;
-  }

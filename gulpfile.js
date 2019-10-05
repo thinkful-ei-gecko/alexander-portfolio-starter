@@ -18,13 +18,18 @@ var paths = {
 };
 
 function style() {
+  var postcssPlugins = [
+    autoprefixer()
+  ];
   return gulp
     .src(paths.styles.src)
     .pipe (sourcemaps.init())
+    // .pipe(sourcemaps.identityMap()) //Activate to debug sourcemap
     .pipe(sass())
     .on('error', sass.logError)
-    .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(sourcemaps.write())
+    .pipe(postcss(postcssPlugins))
+    .pipe(cssnano())
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(browserSync.stream());
 }

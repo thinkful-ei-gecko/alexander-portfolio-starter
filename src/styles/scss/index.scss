@@ -1,19 +1,21 @@
-/* Settings */
-@import 'font-stack';
-@import 'variables';
-/* Tools */
-@import 'mixins';
-/* Generic */
-@import 'normalize';
-@import 'base-settings';
-/* Elements */
-@import 'type-elements';
-@import 'structural-elements';
-@import 'media-queries/';
-/* Object */
-// @import 'sections';
-@import 'sections/*';
-/* Components */
-@import 'copy-components';
-
-@import 'menus';
+/*1_settings */
+@import '1_settings/font-stack';
+@import '1_settings/variables';
+/*2_tools */
+@import '2_tools/mixins';
+/*3_generic */
+@import '3_generic/normalize';
+@import '3_generic/base-settings';
+/*4_elements */
+@import '4_elements/elements_type';
+@import '4_elements/elements_structural';
+@import '4_elements/media-queries/media_mobile';
+@import '4_elements/media-queries/media_tablet';
+@import '4_elements/media-queries/media_desktop';
+/*5_sections */
+@import '5_sections/section_about';
+@import '5_sections/section_contact';
+@import '5_sections/section_project';
+/*6_components */
+@import '6_components/components_copy';
+@import '6_components/components_menus';

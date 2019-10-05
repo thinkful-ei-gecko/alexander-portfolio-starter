@@ -1,0 +1,17 @@
+@media only screen and (max-width: 767px) {
+  hgroup {
+    text-align: center;
+  }
+
+  .project-links a:first-child:after {
+    content: '||';
+    margin: 0 1rem;
+  }
+
+  #nav-menu a {
+    text-decoration: none;
+    color: $primary-base;
+    font-family: $font-stack-header;
+  }
+  
+}

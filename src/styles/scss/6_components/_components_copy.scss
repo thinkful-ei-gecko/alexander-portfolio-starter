@@ -3,7 +3,6 @@
 .hero-copy {
   background-color: $accent-1;
   z-index: -99;
-  margin: -1rem 0;
 }
 
 #logo {
@@ -17,10 +16,6 @@
 
 p.p--break {
   margin-bottom: $line-break;
-}
-
-#section-about {
-  @include off-register-background('/assets/images/woods.png');
 }
 
 section img{

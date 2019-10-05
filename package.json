@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp",
-    "sass": "node-sass --watch styles/scss -o styles/css"
+    "start": "gulp"
   },
   "repository": {
     "type": "git",

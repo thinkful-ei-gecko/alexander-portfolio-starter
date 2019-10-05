@@ -1,9 +1,26 @@
 # Alex Fukui Portfolio
 
-## GULP settings
-### Tasks
+## To Do
 
-Run `gulp` to run live server via browserSync and watch sass directory.
+### High
+
+- Fix the new media query bugs.
+- Change margin for 'About' header.
+- Change background for top section to fit larger formats.
+
+### Low
+
+- Add favicon.
+- Refactor scss to new modular version. [link](http://sass.logdown.com/posts/7858341-the-module-system-is-launched)
+- Implement a build version (via gulp?).
+
+## Setup
+
+After installing dependencies, set `paths` to run to proper source and output for your app*. Use `start` to run a live server via browserSync and a watcher to compile sass directory via `browserSync` and `gulp-sass`.**
+
+*In the future, this may have to be set to interpret and map around a more modular css system, especially if I convert this portfolio to a React site.
+
+**This gulp setup is based on this lovely walkthrough by Jatin Varlyani [here](https://levelup.gitconnected.com/how-to-setup-your-workflow-using-gulp-v4-0-0-5450e3d7c512)
 
 ## Project Log
 
@@ -21,12 +38,12 @@ Run `gulp` to run live server via browserSync and watch sass directory.
 
 - 2019-09-06 15:31:10: Setting up new grids as needed. The off-register background effect has broken on the bottom of the hero image on tablet+ size, need to figure out why.
 
--2019-09-09 23:21:29: Think it's good enough! Going to try submitting for review.
+- 2019-09-09 23:21:29: Think it's good enough! Going to try submitting for review.
 
--2019-09-18 15:59:12: Required fixes from submission applied.
+- 2019-09-18 15:59:12: Required fixes from submission applied, some bugs left to work out.
 
--2019-10-05 12:21:37: Gulp file set to watch scss and run server for page; moved into /src directory.
+- 2019-10-05 12:21:37: Gulp file set to watch scss and run server for page; moved into /src directory. Beginning to reorganize sass files for legibility/ease of use.
 
-## FUTURE GOALS:
+- 2019-10-05 14:06:50: Debugged source map.
 
-- 
+- 2019-10-05 14:25:13: Removed redundant margins and refined/refactored `offset-bg` mixin and includes to better reflect suggested criteria (top and bottom vs. margins).
