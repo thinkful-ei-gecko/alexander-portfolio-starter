@@ -13,17 +13,6 @@
 /* Font */
 /* Application */
 /* Tools */
-/*
-Usage:
-.example {
-    width: 100%;
-        @include breakpoint(mobile) {
-        width:50%;
-    }
-}
-
-*/
-/* Creates a pinched border effect on an element's border */
 /*A background image that gives the illusion of fading as you move down the screen. */
 /**
   * A mixin designed for inherently transparent or low opacity set image backgrounds that are off-register by a set margin on top, with variable image and size.
@@ -368,19 +357,12 @@ body {
 
 hgroup {
   margin: 3rem 0; }
-  @media (max-width: 757px) {
-    hgroup {
-      text-align: center; } }
 
 a {
   color: #ffcc33; }
 
 section ul {
   margin-bottom: 1.5rem; }
-
-@media (min-width: 758px) {
-  p {
-    max-width: 20rem; } }
 
 * {
   box-sizing: border-box; }
@@ -395,19 +377,13 @@ body {
   padding: 0;
   color: #cebebe;
   line-height: 1.5rem;
-  border-color: #336666; }
-  @media (max-width: 757px) {
-    body {
-      font-size: 16px; } }
-  @media (min-width: 758px) and (max-width: 1023px) {
-    body {
-      font-size: 18px; } }
-  @media (min-width: 1024px) {
-    body {
-      font-size: 21px; } }
+  border-color: #336666;
+  font-size: 16px; }
 
 main {
-  max-width: 1200px; }
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr); }
 
 section:nth-child(even) {
   background-color: #336666; }
@@ -425,36 +401,26 @@ nav {
   left: 0;
   right: 0;
   background-image: linear-gradient(180deg, #cebebe 0%, #bebebe 99%);
-  display: flex; }
-  @media (max-width: 757px) {
-    nav {
-      min-height: 8rem; } }
-  @media (max-width: 1023px) {
-    nav {
-      flex-flow: column; } }
-  @media (min-width: 758px) and (max-width: 1023px) {
-    nav {
-      flex-grow: 1;
-      min-height: 10rem; } }
-  @media (min-width: 1024px) {
-    nav {
-      height: 16rem;
-      flex-flow: row;
-      align-items: flex-end; } }
+  display: flex;
+  margin-bottom: -1rem;
+  min-height: 8rem;
+  flex-flow: column; }
 
 header {
+  top: default;
   margin-top: default;
-  background-image: url("assets/images/brickwall.png");
+  bottom: default;
+  margin-bottom: default;
+  background-image: url("/assets/images/brickwall.png");
   background-size: default;
   background-repeat: no-repeat;
   background-position: top;
   background-color: none;
-  background-attachment: fixed; }
-
-header {
+  background-attachment: fixed;
   padding: 4rem 0; }
 
-header, section {
+header,
+section {
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -478,13 +444,10 @@ footer {
   padding-left: 1.5rem; }
 
 @media only screen and (max-width: 767px) {
-  main {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr); }
-  nav {
-    margin-bottom: -1rem; } }
+  hgroup {
+    text-align: center; } }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 768px) {
   nav {
     margin-bottom: -1rem; }
   main {
@@ -496,7 +459,53 @@ footer {
   section:nth-child(odd) {
     grid-column: 6 / span 2; }
   section:last-child {
-    grid-column: 2 / span 6; } }
+    grid-column: 2 / span 6; }
+  body {
+    font-size: 18px; }
+  nav {
+    flex-grow: 1;
+    min-height: 10rem; }
+  #logo {
+    width: 8rem;
+    margin: 1rem 0 1.5rem 1rem; }
+  #nav-menu {
+    justify-content: flex-end;
+    align-items: flex-end; }
+  #nav-menu li {
+    margin-left: 2rem; }
+  #nav-menu:last-child {
+    margin-right: 2rem; }
+  #section-about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 3rem 1fr;
+    grid-template-areas: 'heading heading' 'text image'; }
+  #section-about h2 {
+    grid-area: heading;
+    margin-inline-start: 1.5rem; }
+  #section-about img {
+    grid-area: image; }
+  .about-text {
+    grid-area: text; }
+  #projects {
+    display: flex;
+    align-items: center; }
+  .project-screenshot {
+    margin-left: 3rem; }
+  .project-image {
+    max-width: 400px; }
+  .project-data {
+    margin-right: 3rem; }
+  .project-links {
+    background-color: #ffcc33;
+    padding-bottom: 0;
+    margin: 0 1rem; }
+  .project-links a {
+    background-color: #336666;
+    padding: 1em;
+    margin: 0 0.5rem; }
+  p {
+    max-width: 20rem; } }
 
 @media only screen and (min-width: 1024px) {
   main {
@@ -524,89 +533,48 @@ footer {
     grid-column: 1 / 13; }
   section#section-contact {
     grid-row: 6 / 7;
-    grid-column: 1 / 13; } }
-
-/* Object */
-@media (min-width: 758px) {
-  #section-about {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 3rem 1fr;
-    grid-template-areas: "heading heading" "text image"; } }
-
-@media (min-width: 1024px) {
+    grid-column: 1 / 13; }
+  body {
+    font-size: 21px; }
+  nav {
+    height: 16rem;
+    flex-flow: row;
+    align-items: flex-end; }
+  #logo {
+    margin: 0 3rem;
+    margin: 0 0 4rem 1rem; }
+  #nav-menu {
+    margin-bottom: 3.75rem; }
+  #nav-menu li {
+    margin-left: 3rem; }
   #section-about {
     grid-template-columns: 4rem repeat(2, 1fr);
-    grid-template-areas: ". heading heading" ". text image"; } }
+    grid-template-areas: '. heading heading' '. text image'; }
+  .project-image {
+    max-width: 600px; } }
 
-@media (min-width: 758px) {
-  #section-about h2 {
-    grid-area: heading;
-    margin-inline-start: 1.5rem; } }
-
-@media (min-width: 758px) {
-  #section-about img {
-    grid-area: image; } }
-
-@media (min-width: 758px) {
-  .about-text {
-    grid-area: text; } }
-
-@media (min-width: 758px) {
-  #projects {
-    display: flex;
-    align-items: center; } }
-
+/* Object */
 .project-screenshot {
   display: flex;
   align-items: center;
   flex-flow: column; }
-  @media (min-width: 758px) and (max-width: 1023px) {
-    .project-screenshot {
-      margin-left: 3rem; } }
 
-@media (max-width: 757px) {
-  .project-image {
-    max-width: 320px; } }
+.project-image {
+  max-width: 320px; }
 
-@media (min-width: 758px) and (max-width: 1023px) {
-  .project-image {
-    max-width: 400px; } }
+.project-data {
+  margin: 0 1rem; }
 
-@media (min-width: 1024px) {
-  .project-image {
-    max-width: 600px; } }
-
-@media (max-width: 757px) {
-  .project-data {
-    margin: 0 1rem; } }
-
-@media (min-width: 758px) {
-  .project-data {
-    margin-right: 3rem; } }
-
-#projects h3, #projects h4 {
+#projects h3,
+#projects h4 {
   margin-inline-start: 1.5rem;
   margin-inline-end: 1.5rem; }
 
 .project-links {
   padding-bottom: 1.5rem;
   display: flex;
-  justify-content: center; }
-  @media (max-width: 757px) {
-    .project-links {
-      border-bottom: 2px solid; } }
-  @media (min-width: 758px) {
-    .project-links {
-      background-color: #ffcc33;
-      padding-bottom: 0;
-      margin: 0 1rem; } }
-
-@media (min-width: 758px) {
-  .project-links a {
-    background-color: #336666;
-    padding: 1em;
-    margin: 0 .5rem; } }
+  justify-content: center;
+  border-bottom: 2px solid; }
 
 .project-links a:hover {
   background-color: #4d9999; }
@@ -617,10 +585,9 @@ footer {
 .project-links a:visited {
   background-color: #1a3333; }
 
-@media (max-width: 757px) {
-  .project-links a:first-child:after {
-    content: "||";
-    margin: 0 1rem; } }
+.project-links a:first-child:after {
+  content: '||';
+  margin: 0 1rem; }
 
 .contact-label {
   display: flex;
@@ -632,25 +599,12 @@ footer {
 /* Components */
 .hero-copy {
   background-color: #336666;
-  z-index: -99; }
-  @media (max-width: 1023px) {
-    .hero-copy {
-      margin: -1rem 0; } }
+  z-index: -99;
+  margin: -1rem 0; }
 
-@media (max-width: 757px) {
-  #logo {
-    width: 5.5rem;
-    margin: 1rem 0 1.5rem 1rem; } }
-
-@media (min-width: 758px) and (max-width: 1023px) {
-  #logo {
-    width: 8rem;
-    margin: 1rem 0 1.5rem 1rem; } }
-
-@media (min-width: 1024px) {
-  #logo {
-    margin: 0 3rem;
-    margin: 0 0 4rem 1rem; } }
+#logo {
+  width: 5.5rem;
+  margin: 1rem 0 1.5rem 1rem; }
 
 #logo img {
   width: 8rem; }
@@ -659,37 +613,26 @@ p.p--break {
   margin-bottom: 1.5rem; }
 
 #section-about {
-  background-image: url("assets/images/woods.png");
-  background-attachment: fixed;
-  background-repeat: no-repeat; }
+  top: -1rem;
+  margin-top: -1rem;
+  bottom: -1rem;
+  margin-bottom: -1rem;
+  background-image: url("/assets/images/woods.png");
+  background-size: 780px;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: none;
+  background-attachment: fixed; }
 
 section img {
   margin-bottom: 3rem; }
 
 #nav-menu {
-  display: flex; }
-  @media (max-width: 757px) {
-    #nav-menu {
-      justify-content: space-around; } }
-  @media (min-width: 758px) and (max-width: 1023px) {
-    #nav-menu {
-      justify-content: flex-end;
-      align-items: flex-end; } }
-  @media (min-width: 1024px) {
-    #nav-menu {
-      margin-bottom: 3.75rem; } }
+  display: flex;
+  justify-content: space-around; }
 
-@media (min-width: 758px) and (max-width: 1023px) {
-  #nav-menu li {
-    margin-left: 2rem; } }
-
-@media (min-width: 1024px) {
-  #nav-menu li {
-    margin-left: 3rem; } }
-
-@media (min-width: 758px) and (max-width: 1023px) {
-  #nav-menu:last-child {
-    margin-right: 2rem; } }
+#nav-menu:last-child {
+  margin-right: 2rem; }
 
 #nav-menu a {
   text-decoration: none;

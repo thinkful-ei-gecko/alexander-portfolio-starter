@@ -1,0 +1,40 @@
+.project-screenshot {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+  }
+
+  .project-image {
+    max-width: 320px;
+  }
+  .project-data {
+    margin: 0 1rem;
+  }
+
+  #projects h3,
+  #projects h4 {
+    margin-inline-start: 1.5rem;
+    margin-inline-end: 1.5rem;
+  }
+
+  .project-links {
+    padding-bottom: $line-break;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid;
+  }
+
+  .project-links a:hover {
+    background-color: lighten($accent-1, 15%);
+  }
+  .project-links a:active {
+    background-color: darken($accent-1, 25%);
+  }
+  .project-links a:visited {
+    background-color: darken($accent-1, 15%);
+  }
+
+  .project-links a:first-child:after {
+    content: '||';
+    margin: 0 1rem;
+  }

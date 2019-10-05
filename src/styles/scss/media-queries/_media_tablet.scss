@@ -1,0 +1,112 @@
+@media only screen and (min-width: 768px) {
+  //Grid
+  nav {
+    margin-bottom: -1rem;
+  }
+
+  main {
+    grid-template-columns: 1rem repeat(6, 1fr) 1rem;
+  }
+
+  header {
+    grid-column: span 8;
+  }
+
+  section {
+    grid-column: 2 / span 4;
+  }
+
+  section:nth-child(odd) {
+    grid-column: 6 / span 2;
+  }
+  section:last-child {
+    grid-column: 2 / span 6;
+  }
+
+  //Structural Components
+  body {
+      font-size: 18px;
+  }
+  nav {
+    flex-grow: 1;
+    min-height: 10rem;
+  }
+
+  //Copy Components
+  #logo {
+    width: 8rem;
+    margin: 1rem 0 $line-break 1rem;
+  }
+
+  //Menus
+  #nav-menu {
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  #nav-menu li {
+    margin-left: 2rem;
+  }
+
+  #nav-menu:last-child {
+    margin-right: 2rem;
+  }
+
+  //Section (About)
+  #section-about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 3rem 1fr;
+    grid-template-areas:
+      'heading heading'
+      'text image';
+  }
+
+  #section-about h2 {
+    grid-area: heading;
+    margin-inline-start: 1.5rem;
+  }
+
+  #section-about img {
+    grid-area: image;
+  }
+
+  .about-text {
+    grid-area: text;
+  }
+
+  //Projects
+
+  #projects {
+    display: flex;
+    align-items: center;
+  }
+
+  .project-screenshot {
+    margin-left: 3rem;
+  }
+
+  .project-image {
+    max-width: 400px;
+  }
+  .project-data {
+    margin-right: 3rem;
+  }
+
+  .project-links {
+    background-color: $accent-2;
+    padding-bottom: 0;
+    margin: 0 1rem;
+  }
+
+  .project-links a {
+    background-color: $accent-1;
+    padding: 1em;
+    margin: 0 0.5rem;
+  }
+
+  //Type Elements
+  p {
+    max-width: 20rem;
+  }
+}

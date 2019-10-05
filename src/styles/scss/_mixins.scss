@@ -14,8 +14,11 @@
   /**
   * A mixin designed for inherently transparent or low opacity set image backgrounds that are off-register by a set margin on top, with variable image and size.
   */
-  @mixin off-register-background($url, $margin: -1rem, $size: 780px) {
-    margin-top: $margin;
+  @mixin off-register-background($url, $offset: -1rem, $size: 780px) {
+    top: $offset;
+    margin-top: $offset;
+    bottom: $offset;
+    margin-bottom: $offset;
     background-image: url($url);
     background-size: $size;
     background-repeat: no-repeat;

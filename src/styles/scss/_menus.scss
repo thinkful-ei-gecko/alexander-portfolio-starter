@@ -1,0 +1,14 @@
+#nav-menu {
+  display: flex;
+  justify-content: space-around;
+}
+
+#nav-menu:last-child {
+  margin-right: 2rem;
+}
+
+#nav-menu a {
+  text-decoration: none;
+  color: $primary-base;
+  font-family: $font-stack-header;
+}

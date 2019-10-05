@@ -1,30 +1,48 @@
 /* eslint-disable strict */
-// Based on: https://css-tricks.com/gulp-for-beginners/
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var browserSync = require('browser-sync').create();
 
-const sassSrc = './styles/scss';
-const cssSrc = './styles/css';
+const gulp = require('gulp'),
+  sass = require('gulp-sass'),
+  postcss = require('gulp-postcss'),
+  autoprefixer = require('autoprefixer'),
+  cssnano = require('gulp-cssnano'),
+  sourcemaps = require('gulp-sourcemaps'),
+  browserSync = require('browser-sync').create();
 
-gulp.task('sass', function() {
-  return gulp.src(sassSrc)
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest(cssSrc))
-    .pipe(browserSync.reload({
-      stream:true
-    }));
-});
+sass.compiler = require('sass');
 
-gulp.task('browserSync', function() {
+var paths = {
+  styles: {
+    src:'src/styles/scss/**/*.scss',
+    dest: 'src/styles/css'
+  }
+};
+
+function style() {
+  return gulp
+    .src(paths.styles.src)
+    .pipe (sourcemaps.init())
+    .pipe(sass())
+    .on('error', sass.logError)
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(paths.styles.dest))
+    .pipe(browserSync.stream());
+}
+
+function watch() {
   browserSync.init({
     server: {
-      baseDir: './'
-    },
+      baseDir: './src'
+    }
   });
-});
+  gulp.watch(paths.styles.src, style);
+  gulp.watch('src/*.html').on('change', browserSync.reload);
+}
 
-gulp.task('watch', gulp.series('browserSync', 'sass', function(cb) {
-  gulp.watch(sassSrc, gulp.series('sass'));
-  cb();
-}));
+exports.watch = watch;
+
+exports.style = style;
+
+const build = gulp.parallel(style, watch);
+
+gulp.task('default', build);

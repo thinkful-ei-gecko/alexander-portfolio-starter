@@ -2,7 +2,6 @@
 @import 'font-stack';
 @import 'variables';
 /* Tools */
-@import 'breakpoints';
 @import 'mixins';
 /* Generic */
 @import 'normalize';
@@ -10,11 +9,10 @@
 /* Elements */
 @import 'type-elements';
 @import 'structural-elements';
-@import 'grid';
+@import 'media-queries/';
 /* Object */
-@import 'section-about';
-@import 'section-project';
-@import 'section-contact';
+// @import 'sections';
+@import 'sections/*';
 /* Components */
 @import 'copy-components';
 

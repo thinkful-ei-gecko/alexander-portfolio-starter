@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass --watch ./styles/scss/ -o ./styles/css"
+    "start": "gulp",
+    "sass": "node-sass --watch styles/scss -o styles/css"
   },
   "repository": {
     "type": "git",
@@ -19,14 +20,19 @@
   },
   "homepage": "https://github.com/thinkful-ei-gecko/alexander-portfolio-starter#readme",
   "devDependencies": {
+    "autoprefixer": "^9.6.1",
     "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
     "jquery": "^3.4.1",
     "node-sass": "^4.12.0",
-    "sass": "^1.22.10"
+    "sass": "^1.23.0"
   },
   "dependencies": {
     "gulp": "^4.0.2",
-    "gulp-sass": "^4.0.2",
     "live-server": "^1.2.1"
   }
 }
