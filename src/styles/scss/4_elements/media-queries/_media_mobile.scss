@@ -13,5 +13,12 @@
     color: $primary-base;
     font-family: $font-stack-header;
   }
-  
+
+  #nav-menu {
+    justify-content: space-around;
+  }
+
+  #logo {
+  width: 5.5rem;
+  }
 }
