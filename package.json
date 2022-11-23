@@ -20,7 +20,7 @@
   "homepage": "https://github.com/thinkful-ei-gecko/alexander-portfolio-starter#readme",
   "devDependencies": {
     "autoprefixer": "^9.6.1",
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.27.10",
     "cssnano": "^4.1.10",
     "gulp-cssnano": "^2.1.3",
     "gulp-postcss": "^8.0.0",
